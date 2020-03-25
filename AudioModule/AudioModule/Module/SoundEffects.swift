@@ -25,12 +25,19 @@ class SoundEffect {
     func play() {
         for player in players {
             if player.isPlaying == false {
-                player.play()
+                
+                DispatchQueue.global().async {
+                    player.play()
+                }
+                
                 return
             }
         }
         
         load()
-        players.last?.play()
+        
+        DispatchQueue.global().async {
+            self.players.last?.play()
+        }
     }
 }

@@ -16,7 +16,9 @@ class IntroWithLoop : Song, AVAudioPlayerDelegate {
     }
     
     override func play() {
-        self.player.play()
+        DispatchQueue.global().async {
+            self.player.play()
+        }
     }
     
     override func stop() {

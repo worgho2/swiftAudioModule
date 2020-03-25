@@ -27,8 +27,10 @@ class Song : NSObject {
         if player.isPlaying {
             return
         }
-        player.play()
         
+        DispatchQueue.global().async {
+            self.player.play()
+        }
     }
     
     func stop() {
