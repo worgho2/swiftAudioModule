@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         AudioManager.shared.play(song: .dance)
     }
     
-    
     @IBAction func nightPressed(_ sender: Any) {
         AudioManager.shared.play(song: .night)
     }
@@ -36,6 +35,9 @@ class ViewController: UIViewController {
         AudioManager.shared.play(introWithLoop: .first)
     }
     
+    @IBAction func stopLoopsPressed(_ sender: Any) {
+        AudioManager.shared.stopLoop()
+    }
     @IBAction func stopPressed(_ sender: Any) {
         AudioManager.shared.stopCurrentSong()
     }

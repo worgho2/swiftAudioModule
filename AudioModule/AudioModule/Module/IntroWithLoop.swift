@@ -27,5 +27,9 @@ class IntroWithLoop : Song, AVAudioPlayerDelegate {
         super.stop()
     }
     
+    override func stopLoop() {
+        super.stopLoop()
+    }
+    
 }
  

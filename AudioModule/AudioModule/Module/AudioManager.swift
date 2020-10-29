@@ -29,6 +29,11 @@ class AudioManager{
         introsWithLoops[introWithLoop]?.play()
     }
     
+    func stopLoop() {
+        songs.forEach({$0.value.stopLoop()})
+        introsWithLoops.forEach({ $0.value.stopLoop()})
+    }
+    
     func stopCurrentSong() {
         stopIntrosWithLoops()
         stopSongs()

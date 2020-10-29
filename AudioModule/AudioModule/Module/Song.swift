@@ -37,4 +37,8 @@ class Song : NSObject {
         player.stop()
         player.currentTime = 0
     }
+    
+    func stopLoop() {
+        player.numberOfLoops = 0
+    }
 }
